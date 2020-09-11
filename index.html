@@ -1,33 +1,62 @@
+<!-- v0.1.10 -->  
 <html>
-    <head>
-        <title>Curvy High Waisted Jeggings</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-          <link rel="stylesheet" href="../common/vertical-mv.css">
-          
-          <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
-          <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-          <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
-          <script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
-          <script src="https://unpkg.com/focus-visible@5.1.0/dist/focus-visible.js"></script>
-          <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
-          <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-          <script src="js.js"></script>
-    </head>
-    <body>
-            <model-viewer src="1921-21832.glb"
-                          environment-image="../common/skylit_garage_4k.hdr"
-                          stage-light-intensity="1"
-                          exposure="1"
-                          camera-controls
-                          camera-orbit="30deg 55deg 10m"
-                          interaction-prompt="auto"
-                          camera-target="0m 0m 0m"
-                          >
-            
-           
-            
-            <button onmouseover="block1()" onmouseout="none1()" class="Hotspot" slot="hotspot-1" data-position="-0.052m 0.045m 0.014m" data-normal="-0.37m 0.009m 0.92m" ></button>
-           
+	<head>
+		<title> SceneViewer </title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="demo-style.css">
+               
+	<!-- The following libraries and polyfills are recommended to maximize browser support -->
+	<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+	<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+	<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+	<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+	<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+	<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+
+	<!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
+	<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+	 <script src="https://unpkg.com/focus-visible@5.1.0/dist/focus-visible.js"></script>
+		
+	<script src="https://dky5neca2x8co.cloudfront.net/model-viewer-public/timeme.js"></script>
+		
+        <script src="https://dky5neca2x8co.cloudfront.net/model-viewer-public/stats_track.js"></script>
+
+	<!-- Import the component -->
+	<script type="module" src="https://dky5neca2x8co.cloudfront.net/model-viewer-public/model-viewer.js"></script>
+	<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+	<script src="js.js"></script>
+	</head>
+	<body>
+	<div class="card">
+	
+	
+	<model-viewer
+		name = "model-viewer" 
+                client = "April-test" 
+                collection = "bolle-internal" 
+                id = "bolle-skyblue" 
+		ar
+		alt="bolle-skyblue"
+		src="1921-21832.glb"
+  	        ios-src="1921-21832.usdz"
+		background-color="#F4F4F4"
+		environment-image="env/BLUR.hdr"
+		stage-light-intensity="1"
+		exposure="1"
+		camera-controls
+		interaction-prompt="auto"
+		      reveal="interaction"
+                  camera-target="0m 0m 0m"
+                  camera-orbit="30deg 55deg 10m"
+                  camera-controls
+		      >
+		   
+           <button onmouseover="block1()" onmouseout="none1()" class="Hotspot" slot="hotspot-1"  data-position="-0.052m -0.005m 0.014m" data-normal="-0.37m 0.009m 0.92m" ></button>
+                
             <div id="d_1" class="hs" slot="" data-position= "" data-normal="">
             <p class="ex2">
              <span class="font_t">
@@ -35,24 +64,25 @@
             </span>
             </p>
 
-           <p class="ex1">
+            <p class="ex1">
              <span class="font_b">
-             10x Better Anti-Fog.
+             10x Better Anti-Fog 
              </span>
              </p>
+
              <p class="ex1">
              <span class="font_b">
              40x Better Anti-Scratch than Competition
              </span>
              </p>
-             <img class="images" src="platinum_anti_fog_icons.png">
+             
 
             </div>
                 
            
-            <button onmouseover="block2()" onmouseout="none2()" class="Hotspot" slot="hotspot-3" data-position="0.028m 0.0715m 0.024m" data-normal="0.37m 0.009m 0.92m" ></button>
-            
-             <div id="d_2" class="hs" slot="" data-position= "" data-normal="">
+            <button onmouseover="block2()" onmouseout="none2()" class="Hotspot" slot="hotspot-3" data-position="0.028m 0.0235m 0.024m" data-normal="0.37m 0.009m 0.92m" ></button>
+              <div id="d_2" class="hs" slot="" data-position= "" data-normal="">
+             <p class="ex2">
              <span class="font_t">
             DOUBLE LENS
             </span>
@@ -64,14 +94,13 @@
              </span>
              </p>
 
-             <img class="images" src="double_lens_icons.png">
+             
 
              
              </div>
            
                 
-            <button onmouseover="block3()" onmouseout="none3()" class="Hotspot" slot="hotspot-5" data-position="0.058m 0.025m 0.01m" data-normal="0.44m 0.009m 0.92m" ></button>
-            
+            <button onmouseover="block3()" onmouseout="none3()" class="Hotspot" slot="hotspot-5" data-position="0.05m -0.025m 0.01m" data-normal="0.44m 0.009m 0.92m" ></button>
                 <div id="d_3" class="hs" slot="" data-position= "" data-normal="">
                 
               <p class="ex2">  
@@ -85,17 +114,16 @@
              Lens Tint Adapts to Sunny or Cloudy Conditions
              </span>
              </p>
-             <img class="images" src="light_adaptive_icons_03.png">
+             
              </div> 
-
-            
-                
-       
-            
-           
-            </model-viewer>
-            <style>
-            .HotspotAnnotation{
+<div id="lazy-load-poster" slot="poster"></div>
+             <div id="button-load" slot="poster">Click to View 3D Model</div>
+             
+	</model-viewer>
+	</div>
+		
+	<style>
+        .HotspotAnnotation{
             display: none;
             }
             .test{
@@ -339,18 +367,38 @@
                  font-style: italic;
                  line-height: 1.5em;
 }
+        
+ #lazy-load-poster {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url("skyblue-cover.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #button-load {
+    
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: 6% 50%;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 500;
+    box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 100;
+  }
                
             </style>
-            
-
-             <script>
-             
-             
-
-
-            
-            
-            </script>
-    </body>
+	</body>
 </html>
-
